@@ -1,0 +1,232 @@
+/* 
+
+yecha 设计编写 原创设计 请勿仿制 
+网站地址: www.52img.cn
+联系QQ:372009617
+承接网站设计,帝国插件开发
+
+*/
+@CHARSET "UTF-8";
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td { padding: 0;margin: 0; } 
+body{font-size:12px;font-family: Verdana,"宋体",sans-serif; background-color:#EBEBEB;}
+fieldset, img { border: 0;} 
+table {border-collapse: collapse;border-spacing: 0;} 
+ol, ul {list-style: none;} 
+address, caption, cite, code, dfn, em,th, var {font-weight: normal;font-style: normal;} 
+caption, th {text-align: left;} 
+a{ text-decoration:none;}
+td {font-size: 9pt;}
+
+/*右键菜单*/
+.DreamMenu {position:absolute;visibility:hidden;z-index:100;overflow:hidden;width:110px;border:dimgray 1px solid !important;padding:1px !important;font-size:12px;box-shadow: 0 0 5px #333;-webkit-box-shadow: 0 0 5px #333;-moz-box-shadow: 0 0 5px #333;background:#EBEBEB;text-shadow: #fff 0 1px 0;}
+.DreamMenu a {display:block;width:100%;text-decoration:none;color:#4B4F5D;height:24px;line-height:24px; padding-left:25px;border-bottom:1px solid #CCCCCC;border-top:1px solid #FFFFFF; overflow:hidden;}
+a.addxx { background:url(add.png) 5px center no-repeat;}
+a.refresh {background:url(refresh.png) 5px center no-repeat;}
+a.copy {background:url(copy.png) 5px center no-repeat;}
+a.yulan {background:url(yulan.png) 5px center no-repeat;}
+.DreamMenu a:hover {background-color:#DADADA;height:24px;line-height:24px;}
+/*后台左侧*/
+.leftside {color:#4B4F5D; width:100%;overflow-x:hidden; _width:200px;}
+.leftside h2{ background:url(bg_header.png) repeat-x;}
+.leftside h2 span{background:url(cog.png) 15px center no-repeat; padding-left:40px; height:42px; line-height:42px; color:#CCCCCC; display:block;font-family:Verdana,'Microsoft yahei',Tahoma,Geneva,sans-serif; font-size:15px;}
+.leftside h2 a{ color:#CCCCCC;}
+.leftside h2 a:hover {background:none;}
+.leftside span{border-bottom:1px solid #CCCCCC; border-top:1px solid #FFFFFF; font-size:12px;font-family:Verdana,'Microsoft yahei',Tahoma,Geneva,sans-serif; line-height:32px;padding-left:38px;background-color:#DADADA; display:block;}
+.leftside li a{border-bottom:1px solid #CCCCCC; border-top:1px solid #FFFFFF; font-size:12px;font-family:Verdana,'Microsoft yahei',Tahoma,Geneva,sans-serif; line-height:32px; height:32px; padding-left:48px; display:block; color:#666}
+.leftside a:hover{background-color:#DADADA;}
+.leftside li span{  padding:0; margin:0; border:none;}
+.leftside li span a{}
+span.file1 { margin:0;}
+/*系统设置*/
+.xtsz {background:url(Wrench.png) 15px center no-repeat;}
+.xtcssz {background:url(glczlx.png) 25px center no-repeat;}
+.wjtsz {background:url(html_valid.png) 25px center no-repeat;}
+.kzbl {background:url(monitor_lightning.png) 25px center no-repeat;}
+.fhq {background:url(shield.png) 25px center no-repeat;}
+.aqcs{background:url(exclamation.png) 25px center no-repeat;}
+/*数据更新*/
+.sjgx {background:url(gx.png) 15px center no-repeat;}
+.sjgxzx {background:url(arrow_rotate_clockwise.png) 25px center no-repeat;}
+.gxxxy {background:url(application_put.png) 25px center no-repeat;}
+.ycfb {background:url(arrow_branch.png) 25px center no-repeat;}
+.sjzl {background:url(arrow_out.png) 25px center no-repeat;}
+/*数据表与系统模型*/
+.sjbymx {background:url(Screenshot.png) 15px center no-repeat;}
+.xjsjb {background:url(application_add.png) 25px center no-repeat;}
+.glsjb {background:url(application_form.png) 25px center no-repeat;}
+/*计划任务*/
+.jhrw {background:url(Steam.png) 15px center no-repeat;}
+.glsxrw {background:url(arrow_rotate_anticlockwise.png) 25px center no-repeat;}
+.gljhrw {background:url(arrow_switch.png) 25px center no-repeat;}
+/*工作流*/
+.gzl{background:url(Limewire.png) 15px center no-repeat;}
+.zjgzl {background:url(addgzl.png) 25px center no-repeat;}
+.glgzl {background:url(glgzl.png) 25px center no-repeat;}
+/*优化方案*/
+.yhfa {background:url(IE.png) 15px center no-repeat;}
+.glyhfa {background:url(textfield_key.png) 25px center no-repeat;}
+/* 管理网站访问端*/
+.wzdfwd {background:url(computer.png) 15px center no-repeat;}
+.glwzfwd {background:url(computer_on.png) 25px center no-repeat;}
+/*扩展菜单*/
+.kzcd {background:url(IM.png) 15px center no-repeat;}
+.glkzcd {background:url(sitemap.png) 25px center no-repeat;}
+/*备份与恢复数据*/
+.bfyhf {background:url(Network.png) 15px center no-repeat;}
+.bfsj {background:url(bullet_disk.png) 25px center no-repeat;}
+.hfsj {background:url(bullet_error.png) 25px center no-repeat;}
+.glbfml {background:url(folder.png) 25px center no-repeat;}
+.zxsql {background:url(zxsqll.png) 25px center no-repeat;}
+/*栏目列表*/
+/*.glsyxx span:hover{background-color:#DADADA;}*/
+span.menu1,span.menu2,span.menu3,span.menu4{ background:url(folder.png) 15px center no-repeat;background-color:#DADADA;}
+.list span a,.list1 span.file a.menuarr,.list1 span.file1 a.menuarr{background:url(page_white_add.png) 25px center no-repeat; background-color:#EBEBEB;}
+.list1 span.menu1 a.menuarr,.list1 span.menu3 a.menuarr,.list1 span.menu2 a.menuarr,.list1 span.menu4 a.menuarr,.list span.menu2 a.menuarr,.list span.menu1 a.menuarr,.list span.menu3 a.menuarr,.list span.menu4 a.menuarr{background: url(folder.png) 25px center no-repeat;background-color: #DADADA;}
+.list span.file a.menuarr:hover,.list span.file1 a.menuarr:hover,span.file:hover,span.file1:hover{background-color: #DADADA;}
+.glsyxx a{ display:block; cursor:pointer;}
+span.file,span.file1{background:url(page_white_add.png) 15px center no-repeat; background-color:#EBEBEB;}
+.list1 span.file a.menuarr,.list1 span.file1 a.menuarr,.list span.file a.menuarr,.list span.file1 a.menuarr{background:url(page_white_add.png) 35px center no-repeat; background-color:#EBEBEB; padding-left:55px;}
+/*模板管理*/
+.leftside h2 span select{ margin-top:10px; line-height:32px;}
+/*信息相关管理*/
+.lmxggl,.zdyymmb,.xwmxxg{background:url(xxxggl.png) 15px center no-repeat;}
+.glxx,.glzdyymfl{background:url(glxx.png) 25px center no-repeat;}
+.shxx {background:url(shxx.png) 25px center no-repeat;}
+.qfxx {background:url(qfxx.png) 25px center no-repeat;}
+.glpl,.glystp {background:url(glpl.png) 25px center no-repeat;}
+.gxsp {background:url(gxsp.png) 25px center no-repeat;}
+.gxzt {background:url(gxzt.png) 25px center no-repeat;}
+.sjtj,.tjxxsj{background:url(sjtj.png) 25px center no-repeat;}
+.phtj {background:url(phtj.png) 25px center no-repeat;}
+/*栏目管理*/
+.lmgl {background:url(lmgl.png) 15px center no-repeat;}
+.gllm {background:url(gllm.png) 25px center no-repeat;}
+.gllmfy {background:url(gllmfy.png) 25px center no-repeat;}
+.lmzdyzd {background:url(lmzdyzd.png) 25px center no-repeat;}
+.plszlmsx {background:url(plszlmsx.png) 25px center no-repeat;}
+/*专题管理*/
+.ztgl {background:url(ztgl.png) 15px center no-repeat;}
+.glztfl {background:url(glztfl.png) 25px center no-repeat;}
+.glzt {background:url(glzt.png) 25px center no-repeat;}
+.ztzdyzd,.gldzqz{background:url(ztzdyzd.png) 25px center no-repeat;}
+/*标题分类管理*/
+.btflgl {background:url(btflgl.png) 15px center no-repeat;}
+.zjbtfl,.zjcjjd{background:url(zjbtfl.png) 25px center no-repeat;}
+.glbtfl,.glcjjd{background:url(glbtfl.png) 25px center no-repeat;}
+/*碎片管理*/
+.spgl {background:url(spgl.png) 15px center no-repeat;}
+.glspfl,.glfkfl{background:url(glspfl.png) 25px center no-repeat;}
+.glsp,.glxxfk{background:url(glsp.png) 25px center no-repeat;}
+/*自定义页面*/
+.zdyym,.lbmb{background:url(zdyym.png) 15px center no-repeat;}
+.zjzdyym {background:url(zjzdyym.png) 25px center no-repeat;}
+.glzdyym,.glggfl{background:url(glzdyym.png) 25px center no-repeat;}
+/*自定义列表*/
+.zdylb {background:url(zdylb.png) 15px center no-repeat;}
+.glzdylbfl {background:url(glzdylbfl.png) 25px center no-repeat;}
+.zjzdylb {background:url(zjzdylb.png) 25px center no-repeat;}
+.glzdylb {background:url(glzdylb.png) 25px center no-repeat;}
+/*自定义js*/
+.zdyjs,.jsmb{background:url(zdyjs.png) 15px center no-repeat;}
+.glzdyjsfl {background:url(glzdyjsfl.png) 25px center no-repeat;}
+.zjzdyjs {background:url(zjzdyjs.png) 25px center no-repeat;}
+.glzdyjs,.glfcjsjzf{background:url(glzdyjs.png) 25px center no-repeat;}
+/*Tags管理*/
+.tagsgl {background:url(tagsgl.png) 15px center no-repeat;}
+.sztagscs {background:url(sztagscs.png) 25px center no-repeat;}
+.gltagsfl {background:url(gltagsfl.png) 25px center no-repeat;}
+.gltags {background:url(gltags.png) 25px center no-repeat;}
+/*附件管理*/
+.fjgl {background:url(fjgl.png) 15px center no-repeat;}
+.glfj {background:url(glfj.png) 25px center no-repeat;}
+/*采集管理*/
+.cjgl {background:url(cjgl.png) 15px center no-repeat;}
+.glcjjdfy {background:url(glcjjdfy.png) 25px center no-repeat;}
+/*全站全文搜索*/
+.qzqwss,.ssmb{background:url(qzqwss.png) 15px center no-repeat;}
+.qzsssz {background:url(qzsssz.png) 25px center no-repeat;}
+.qlsssjy {background:url(glsssjy.png) 25px center no-repeat;}
+.qlsssj {background:url(qlsssj.png) 25px center no-repeat;}
+/*wap管理*/
+.wapgl {background:url(wapgl.png) 15px center no-repeat;}
+.wapsz {background:url(wapsz1.png) 25px center no-repeat;}
+.glwapmb {background:url(glwapmb.png) 25px center no-repeat;}
+/*其他相关*/
+.qtxg,.qtgn{background:url(qtxg.png) 15px center no-repeat;}
+.yhfbtj {background:url(yhfbtj.png) 25px center no-repeat;}
+.glssgjz {background:url(glssgjz.png) 25px center no-repeat;}
+.plthgjz {background:url(plthgjz.png) 25px center no-repeat;}
+.plzyxx {background:url(plzyxx.png) 25px center no-repeat;}
+.xxplgd {background:url(xxplgd.png) 25px center no-repeat;}
+.plscxx {background:url(plscxx.png) 25px center no-repeat;}
+/*模板管理*/
+.mb {background:url(mb.png) 15px center no-repeat;}
+.fmmb {background:url(fmmb.png) 15px center no-repeat;}
+.nrmb {background:url(nrmb.png) 15px center no-repeat;}
+.bqmb {background:url(bqmb.png) 15px center no-repeat;}
+.ggmbbl {background:url(ggmbbl.png) 15px center no-repeat;}
+.ggmb {background:url(sjbyxtmx.png) 15px center no-repeat;}
+.pllbmb,.lybgl {background:url(pllbmb.png) 15px center no-repeat;}
+.dymb {background:url(dymb.png) 15px center no-repeat;}
+.xzmxxg{background:url(tpmb.png) 15px center no-repeat;}
+.mbzgl {background:url(mbzgl.png) 15px center no-repeat;}
+.glmb {background:url(glmb.png) 25px center no-repeat;}
+.symb {background:url(symb.png) 25px center no-repeat;}
+.tyggmb {background:url(ggmb.png) 25px center no-repeat;}
+.tyggmbon{background:url(ggmbon.png) 25px center no-repeat; background-color:#DADADA;}
+/*用户面板*/
+.htyhgl {background:url(htyhgl.png) 15px center no-repeat;}
+.qthygl {background:url(qthygl.png) 15px center no-repeat;}
+.hykjgl {background:url(hykjgl.png) 15px center no-repeat;}
+.wbjk {background:url(wbjk.png) 15px center no-repeat;}
+.xggrzl {background:url(xggrzl.png) 25px center no-repeat;}
+.glyhz {background:url(glyhz.png) 25px center no-repeat;}
+.glbm {background:url(glbm.png) 25px center no-repeat;}
+.glyh {background:url(glyh.png) 25px center no-repeat;}
+.gldlrz {background:url(gldlrz.png) 25px center no-repeat;}
+.glczrz {background:url(glczrz.png) 25px center no-repeat;}
+.glhtfg {background:url(glhtfg.png) 25px center no-repeat;}
+.glhyz,.glzz{background:url(glhyz.png) 25px center no-repeat;}
+.glhy {background:url(glhy.png) 25px center no-repeat;}
+.plqlhy {background:url(plqlhy.png) 25px center no-repeat;}
+.glhyzd {background:url(glhyzd.png) 25px center no-repeat;}
+.glhybd {background:url(glhybd.png) 25px center no-repeat;}
+.glkjmb {background:url(glkjmb.png) 25px center no-repeat;}
+.glkjly {background:url(glkjly.png) 25px center no-repeat;}
+.glkjfk {background:url(glkjfk.png) 25px center no-repeat;}
+.glwbdljk {background:url(glwbdljk.png) 25px center no-repeat;}
+.glczlx {background:url(glczlx.png) 25px center no-repeat;}
+.gldk,.glnrgjz{background:url(gldk.png) 25px center no-repeat;}
+.plzsds {background:url(plzsds.png) 25px center no-repeat;}
+.plfsyj {background:url(plfsyj.png) 25px center no-repeat;}
+.plfsdxx {background:url(plfsdxx.png) 25px center no-repeat;}
+.plscdxx {background:url(plscdxx.png) 25px center no-repeat;}
+/*插件管理*/
+.ggxt {background:url(ggxt.png) 15px center no-repeat;}
+.tpxt,.tpmb{background:url(tpxt.png) 15px center no-repeat;}
+.yqljgl {background:url(yqljgl.png) 15px center no-repeat;}
+.xxfkgl {background:url(xxfkgl.png) 15px center no-repeat;}
+.fcjcj {background:url(fcjcj.png) 15px center no-repeat;}
+.glgg {background:url(glgg.png) 25px center no-repeat;}
+.zjtp {background:url(zjtp.png) 25px center no-repeat;}
+.gltp {background:url(gltp.png) 25px center no-repeat;}
+.glyqljfl {background:url(glyqljfl.png) 25px center no-repeat;}
+.glyqlj {background:url(glyqlj.png) 25px center no-repeat;}
+.gllyfl {background:url(gllyfl.png) 25px center no-repeat;}
+.glly {background:url(glly.png) 25px center no-repeat;}
+.plscly {background:url(plscly.png) 25px center no-repeat;}
+.glfkzd {background:url(glfkzd.png) 25px center no-repeat;}
+/*其他管理*/
+.zxzf {background:url(zxzf.png) 15px center no-repeat;}
+.tpxxgl {background:url(tpxxgl.png) 15px center no-repeat;}
+.glxxly {background:url(glxxly.png) 25px center no-repeat;}
+.glglzf {background:url(glglzf.png) 25px center no-repeat;}
+.scxzjl {background:url(scxzjl.png) 25px center no-repeat;}
+.glcwbg {background:url(glcwbg.png) 25px center no-repeat;}
+.plthdzqx {background:url(plthdzqx.png) 25px center no-repeat;}
+.bfqgl {background:url(bfqgl.png) 25px center no-repeat;}
+.zfcspz {background:url(zfcspz.png) 25px center no-repeat;}
+.glzfjk {background:url(glzfjk.png) 25px center no-repeat;}
+.glzfjl {background:url(glzfjl.png) 25px center no-repeat;}
+.gltpxxfl {background:url(gltpxxfl.png) 25px center no-repeat;}
+.gltpxx {background:url(gltpxx.png) 25px center no-repeat;}
